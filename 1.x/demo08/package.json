@@ -4,12 +4,14 @@
   "description": "webpack",
   "main": "main.js",
   "scripts": {
-    "dev" : "webpack-dev-server --devtool eval --progress --colors --open --hot --port 8989",
-    "build" : "webapck -p"
+    "dev": "webpack-dev-server --devtool eval --progress --colors",
+    "build": "webapck -p"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "html-webpack-plugin": "^2.28.0",
+    "open-browser-webpack-plugin": "^0.0.5",
     "webpack": "^1.14.0",
     "webpack-dev-server": "^1.16.3"
   }
