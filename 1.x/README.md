@@ -60,7 +60,7 @@
 
     webpack.config.js
 
-        modules:{
+        module:{
             loaders : [
                 {test : /\.css$/, loader : 'style-loader!css-loader'}
             ]
@@ -70,7 +70,7 @@
 
     webpack.config.js
 
-        modules : {
+        module : {
             loaders : [
                 {
                     test : /\.(png|jpgy)$/, loader : 'url-loader?limit=8192'
@@ -162,11 +162,13 @@
 
 11. Code splitting with bundle-loader
 
+    npm/cnpm install  bundle-loader -D/--save-dev
 
 12. Common chunk
 
     webpack.config.js
 
+        // 当多个脚本有共同的部分，可以提取公共部分为一个单独的文件commonschunkplugin
         var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
         module: {
@@ -187,7 +189,29 @@
     
 13. Vendor chunk
 
-14. Exposing global variables 
+    webpack.config.js
+
+        plugins: [
+            new webpack.optimize.CommonsChunkPlugin(/* chunkName= */'vendor', /* filename= */'vendor.js')
+        ]
+
+        plugins: [
+            new webpack.ProvidePlugin({
+                $ : 'jquery',
+                jquery : 'jquery',
+                window.jquery : 'jquery'
+            })
+        ]
+
+14. Exposing global variables
+
+    webpack.config.js
+
+        externals: {
+            // require('data') is external and available
+            //  on the global var data
+            'data': 'data'
+        }
 
 15. Hot Module Replacement
 
