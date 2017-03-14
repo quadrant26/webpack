@@ -6,7 +6,7 @@ module.exports = {
         //path : __dirname + '/dist',
         filename : 'bundle.js'
     },
-    modules : {
+    module : {
         loaders : [
             {
                 test : /\.(png|jpgy)$/, loader : 'url-loader?limit=8192'
