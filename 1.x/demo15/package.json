@@ -1,0 +1,16 @@
+{
+  "name": "webpack1.x",
+  "version": "1.0.0",
+  "description": "webpack",
+  "main": "index.js",
+  "scripts": {
+    "dev" : "webpack-dev-server --devtool eval --progress --colors --open --hot --port 8989",
+    "build" : "webapck -p"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.3"
+  }
+}
