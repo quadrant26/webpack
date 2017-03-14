@@ -6,7 +6,7 @@ module.exports = {
         //path : __dirname + '/dist',
         filename : 'bundle.js'
     },
-    modules:{
+    module:{
         loaders : [
             { test: /\.css$/, loader : 'style-loader!css-loader' }
         ]
