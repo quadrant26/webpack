@@ -3,10 +3,10 @@ var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
 
 module.exports = {
     entry : {
-        bundle1 : 'main1.jsX' 
+        bundle1 : './main1.jsx',
+        bundle2 : './main2.jsx'
     },
     output : {
-        //path : __dirname + '/dist',
         filename : '[name].js'
     },
     module: {
@@ -16,7 +16,7 @@ module.exports = {
             exclude: /node_modules/,
             loader: 'babel-loader',
             query: {
-            presets: ['es2015', 'react']
+                presets: ['es2015', 'react']
             }
         },
         ]
