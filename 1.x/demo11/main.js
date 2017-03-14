@@ -1,1 +1,7 @@
-document.write('<h1>Hello webpack!</h1>');
+var load = require("bundle-loader!./a.js");
+
+laod(function (file){
+    document.open();
+    document.write("<h1>"+ file +"</h1>");
+    document.close();
+})
