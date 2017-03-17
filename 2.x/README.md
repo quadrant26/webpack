@@ -19,7 +19,7 @@
             new ExtractTextPlugin("style.css")
         ]
 
-    2. multiple instances
+    2.multiple instances
 
         const extractCSS = new ExtractTextPlugin('stylesheets/[name]-one.css');
         const extractLESS = new ExtractTextPlugin('stylesheets/[name]-two.css');
@@ -41,7 +41,7 @@
             extractLESS
         ]
 
-    3. Sass or LESS
+    3.Sass or LESS
 
         module: {
             rules: [
