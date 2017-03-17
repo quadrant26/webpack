@@ -5,6 +5,6 @@ console.log(A.a);
 
 B.add();
 
-//import './assets/css/1.css'
+import './assets/css/1.css'
 
 // require("./1.css")
