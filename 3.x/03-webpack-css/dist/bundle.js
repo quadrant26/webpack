@@ -60,90 +60,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info__ = __webpack_require__(2);
-// 1. 使用 CommonJs 规范
-const {add, mul} = __webpack_require__(1)
-
-console.log( add(20, 30));
-console.log( mul(20, 30));
-
-// 2. 使用 ES6 的模块化规范
-
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["c" /* name */], __WEBPACK_IMPORTED_MODULE_0__js_info__["a" /* age */], __WEBPACK_IMPORTED_MODULE_0__js_info__["b" /* height */]);
-
-// 3. 依赖 css 文件
-__webpack_require__(3);
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-
-function add( num1, num2){
-    return num1 + num2;
-}
-
-function mul( num1, num2){
-    return num1 * num2;
-}
-
-module.exports = {
-    mul: mul,
-    add: add
-}
-
-/***/ }),
-/* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const name = 'why';
-/* harmony export (immutable) */ __webpack_exports__["c"] = name;
-
-const age = 19;
-/* harmony export (immutable) */ __webpack_exports__["a"] = age;
-
-const height = 20;
-/* harmony export (immutable) */ __webpack_exports__["b"] = height;
-
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var api = __webpack_require__(4);
-            var content = __webpack_require__(5);
-
-            content = content.__esModule ? content.default : content;
-
-            if (typeof content === 'string') {
-              content = [[module.i, content, '']];
-            }
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = api(module.i, content, options);
-
-var exported = content.locals ? content.locals : {};
-
-
-
-module.exports = exported;
-
-/***/ }),
-/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -387,20 +308,7 @@ module.exports = function (moduleId, list, options) {
 };
 
 /***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Imports
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(6);
-exports = ___CSS_LOADER_API_IMPORT___(false);
-// Module
-exports.push([module.i, "body{\r\n    background-color:red;\r\n}", ""]);
-// Exports
-module.exports = exports;
-
-
-/***/ }),
-/* 6 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -480,6 +388,140 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_info__ = __webpack_require__(4);
+// 1. 使用 CommonJs 规范
+const {add, mul} = __webpack_require__(3)
+
+console.log( add(20, 30));
+console.log( mul(20, 30));
+
+// 2. 使用 ES6 的模块化规范
+
+console.log(__WEBPACK_IMPORTED_MODULE_0__js_info__["c" /* name */], __WEBPACK_IMPORTED_MODULE_0__js_info__["a" /* age */], __WEBPACK_IMPORTED_MODULE_0__js_info__["b" /* height */]);
+
+// 3. 依赖 css 文件
+__webpack_require__(5);
+
+// 4. 依赖 less 文件
+__webpack_require__(7);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+
+function add( num1, num2){
+    return num1 + num2;
+}
+
+function mul( num1, num2){
+    return num1 * num2;
+}
+
+module.exports = {
+    mul: mul,
+    add: add
+}
+
+/***/ }),
+/* 4 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+const name = 'why';
+/* harmony export (immutable) */ __webpack_exports__["c"] = name;
+
+const age = 19;
+/* harmony export (immutable) */ __webpack_exports__["a"] = age;
+
+const height = 20;
+/* harmony export (immutable) */ __webpack_exports__["b"] = height;
+
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(0);
+            var content = __webpack_require__(6);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(1);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "body{\r\n    background-color:red;\r\n}", ""]);
+// Exports
+module.exports = exports;
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var api = __webpack_require__(0);
+            var content = __webpack_require__(8);
+
+            content = content.__esModule ? content.default : content;
+
+            if (typeof content === 'string') {
+              content = [[module.i, content, '']];
+            }
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = api(module.i, content, options);
+
+var exported = content.locals ? content.locals : {};
+
+
+
+module.exports = exported;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(1);
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "body {\n  font-size: 30px;\n  color: orange;\n}\n", ""]);
+// Exports
+module.exports = exports;
+
 
 /***/ })
 /******/ ]);
