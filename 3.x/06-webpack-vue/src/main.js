@@ -17,7 +17,8 @@ require("./css/special.less");
 // 5. 利用vue 进行开发
 
 import Vue from 'vue';
-import App from './vue/app'
+// import App from './vue/app'
+import App from './vue/App.vue'
 
 new Vue({
     el: "#app",
