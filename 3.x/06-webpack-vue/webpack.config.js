@@ -61,6 +61,7 @@ module.exports = {
         // 别名
         // git commit -m ''
         // git c ''
+        extensions: ['.js', '.css', '.vue'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js'
         }
