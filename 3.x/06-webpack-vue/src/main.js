@@ -20,6 +20,12 @@ import Vue from 'vue';
 
 const App = new Vue({
     el: "#app",
+    template: `
+        <div>
+            <h2>{{message}}</h2>
+            <button>按钮</button>
+        </div>
+    `,
     data: {
         message: "Hello, World"
     }
