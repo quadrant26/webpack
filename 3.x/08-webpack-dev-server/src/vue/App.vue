@@ -4,6 +4,7 @@
         <button @click="btnClick">按钮</button>
 
         <Cpn></Cpn>
+        <Cpn></Cpn>
     </div>
 </template>
 
