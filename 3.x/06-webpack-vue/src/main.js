@@ -17,25 +17,7 @@ require("./css/special.less");
 // 5. 利用vue 进行开发
 
 import Vue from 'vue';
-
-const App = {
-    template: `
-        <div>
-            <h2>{{message}}</h2>
-            <button @click="btnClick">按钮</button>
-        </div>
-    `,
-    data(){
-        return{
-            message: "Hello, world",
-        }
-    },
-    methods: {
-        btnClick (){
-            console.log("hehehe")
-        }
-    }
-};
+import App from './vue/app'
 
 new Vue({
     el: "#app",
