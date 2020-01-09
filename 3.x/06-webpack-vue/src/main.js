@@ -18,15 +18,29 @@ require("./css/special.less");
 
 import Vue from 'vue';
 
-const App = new Vue({
-    el: "#app",
+const App = {
     template: `
         <div>
             <h2>{{message}}</h2>
-            <button>按钮</button>
+            <button @click="btnClick">按钮</button>
         </div>
     `,
-    data: {
-        message: "Hello, World"
+    data(){
+        return{
+            message: "Hello, world",
+        }
+    },
+    methods: {
+        btnClick (){
+            console.log("hehehe")
+        }
+    }
+};
+
+new Vue({
+    el: "#app",
+    template: '<App />',
+    components: {
+        App
     }
 })
